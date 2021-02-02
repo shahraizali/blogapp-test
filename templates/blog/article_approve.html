@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block body %}
+    <h2>USER: {{ request.user }}</h2>
+    {% if error %}
+        {{ error }}
+    {% else %}
+        <div class="text-center"><h3>Articles List</h3></div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Written By</th>
+                    <th>created at</th>
+                    <th colspan="2" class="text-center">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% if articles %}
+                    {% for article in articles %}
+                        <tr>
+                            <td scope="row"><a href="{% url "blog:article_detail" article.id %}">{{ article.title }}</a>
+                            </td>
+                            <td>{{ article.written_by.user.name }}</td>
+                            <td>{{ article.created_at }}</td>
+                            <td>
+                                <form action="#" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" value="approve" name="action">
+                                    <input type="hidden" value="{{ article.id }}" name="article_id">
+                                    <button class="btn btn-link">Approve</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="#" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" value="reject" name="action">
+                                    <input type="hidden" value="{{ article.id }}" name="article_id">
+                                    <button class="btn btn-link">Reject</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5" class="text-center ">No Data</td>
+                    </tr>
+                {% endif %}
+
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+{% endblock %}
