@@ -1,0 +1,162 @@
+[
+{
+    "model": "users.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$C32uI9P235PQ$ZZuUf3Dth4HsWIrWaoISt7hBKmbiUrU6jWwFoqAS38M=",
+        "last_login": "2021-02-01T23:01:05.485Z",
+        "is_superuser": true,
+        "username": "shahr",
+        "first_name": "Shahraiz",
+        "last_name": "Ali",
+        "email": "shahraiz@eatnnow.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-02-01T21:04:21Z",
+        "name": "Shahraiz Ali",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$dnXtBz71gbPH$Z4fJkhN80EJVR00X4qK3Bk031F1ZPqyxgETW0NVDt+8=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aaa",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-02-02T00:21:04.313Z",
+        "name": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.writer",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "shahr"
+        ],
+        "is_editor": true
+    }
+},
+{
+    "model": "users.writer",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "aaa"
+        ],
+        "is_editor": false
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+        "title": "Django Admin Custom Filter03.png1",
+        "content": "asdaaaaa",
+        "created_at": "2021-02-01T21:20:55.537Z",
+        "updated_at": "2021-02-01T21:20:55.537Z",
+        "status": 2,
+        "written_by": 1,
+        "edited_by": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 2,
+    "fields": {
+        "title": "a",
+        "content": "a",
+        "created_at": "2021-02-01T22:34:14.800Z",
+        "updated_at": "2021-02-01T22:34:14.800Z",
+        "status": 2,
+        "written_by": null,
+        "edited_by": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 3,
+    "fields": {
+        "title": "Django Admin Custom Filter03.png",
+        "content": "adasdsa",
+        "created_at": "2021-02-01T22:44:43.517Z",
+        "updated_at": "2021-02-01T22:44:43.517Z",
+        "status": 2,
+        "written_by": 1,
+        "edited_by": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 4,
+    "fields": {
+        "title": "Django Admin Custom Filter03.png11",
+        "content": "adasdsa",
+        "created_at": "2021-02-01T22:46:58.016Z",
+        "updated_at": "2021-02-01T22:46:58.016Z",
+        "status": 3,
+        "written_by": 1,
+        "edited_by": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 5,
+    "fields": {
+        "title": "test",
+        "content": "asas",
+        "created_at": "2021-02-01T23:39:01.424Z",
+        "updated_at": "2021-02-01T23:39:01.424Z",
+        "status": 1,
+        "written_by": 1,
+        "edited_by": null
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 6,
+    "fields": {
+        "title": "asda",
+        "content": "asda",
+        "created_at": "2021-02-01T23:47:38.633Z",
+        "updated_at": "2021-02-02T00:21:11.113Z",
+        "status": 1,
+        "written_by": 1,
+        "edited_by": 2
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 7,
+    "fields": {
+        "title": "Django Admin Custom Filter03.png",
+        "content": "asa",
+        "created_at": "2021-02-01T23:52:32.385Z",
+        "updated_at": "2021-02-01T23:52:32.385Z",
+        "status": 1,
+        "written_by": null,
+        "edited_by": null
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 8,
+    "fields": {
+        "title": "asa",
+        "content": "asaaaa",
+        "created_at": "2021-02-02T00:03:13.931Z",
+        "updated_at": "2021-02-02T00:03:13.931Z",
+        "status": 2,
+        "written_by": null,
+        "edited_by": 1
+    }
+}
+]

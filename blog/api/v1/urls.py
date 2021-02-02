@@ -10,5 +10,5 @@ router.register("article", ArticleViewSet)
 urlpatterns = [
     path("", include(router.urls)),
     path("article-approval/", api.ArticleApproval.as_view(), name="ArticleApproval"),
-    path("articles-edited/", api.ArticleEdited.as_view(), name="ArticleApproval"),
+    path("articles-edited/", api.ArticleEdited.as_view(), name="ArticleEdited"),
 ]
